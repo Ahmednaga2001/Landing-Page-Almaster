@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
     return (
         <>
-        <div className='bg-sec text-text'>
+        <div className='bg-sec text-text footer'>
             <div className="container mx-auto px-4 py-[80px]">
                 <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
                     <div className="about">
@@ -17,10 +17,10 @@ const Footer = () => {
                     <div className="links mx-auto">
                         <h2 className='text-[32px] font-semibold'>روابط مهمة</h2>
                         <ul className='pt-[30px]'>
-                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] transition'><Link href="/">الرئيسية</Link></li>
-                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] transition'><Link href="/">خدمتنا</Link></li>
-                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] transition'><Link href="/">اعمالنا</Link></li>
-                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] transition'><Link href="/">طلب</Link></li>
+                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] link'><Link href="/">الرئيسية</Link></li>
+                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] link'><Link href="/">خدمتنا</Link></li>
+                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] link'><Link href="/">اعمالنا</Link></li>
+                            <li className='pt-[15px] text-[20px] hover:translate-x-[-10px] link'><Link href="/">طلب</Link></li>
                         </ul>
                     </div>
                     <div className="contacts mx-auto">

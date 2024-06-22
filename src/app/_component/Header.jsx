@@ -10,8 +10,12 @@ const Header = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     useEffect(() => {
+        const seNav = document.querySelector('.se-nav');
+
         if (isMenuOpen) {
             document.body.classList.add('no-scroll');
+            seNav.classList.add('active');
+
         } else {
             document.body.classList.remove('no-scroll');
         }       
@@ -27,7 +31,7 @@ const Header = () => {
                                 <img src="/logo.png" className='w-[70px] h-[70px] rounded-md' alt="Logo" />
                             </div>
                             <div className='flex justify-end gap-5'>
-                                <div className="links md:flex gap-5 hidden">
+                                <div className=" md:flex gap-5 nav-buttons">
                                     <div className='flex items-center gap-2 px-5 py-3 cursor-pointer border rounded-full'>
                                         ابدأ مشروعك
                                         <FaArrowLeftLong className='flex' />
@@ -50,8 +54,9 @@ const Header = () => {
                 </nav>
             )}
             {isMenuOpen && (
-                    <nav className="bg-primary min-h-screen text-text se-nav fixed top-0 w-full z-20">
-                    <div className="container mx-auto p-4">
+                    <nav className=" min-h-screen text-text se-nav fixed top-0 w-full z-20">
+                  <div className="nav-mobile-overlay">
+                  <div className="container mx-auto p-4">
                         <div className='flex justify-between'>
                             <img src="/logo.png" className='w-[70px] h-[70px] rounded-md' alt="Logo" />
                             <button onClick={toggleMenu}>
@@ -63,14 +68,12 @@ const Header = () => {
                         </div>
                         <div className='flex justify-center text-center'>
                             <ul className='pt-[30px]'>
-                                <li className='pt-[20px] text-[20px] hover:text-[25px] transition'><Link href="/">الرئيسية</Link></li>
-                                <li className='pt-[20px] text-[20px] hover:text-[25px]  transition'><Link href="/">خدمتنا</Link></li>
-                                <li className='pt-[20px] text-[20px] hover:text-[25px] transition'><Link href="/">اعمالنا</Link></li>
-                                <li className='pt-[20px] text-[20px] hover:text-[25px] transition'><Link href="/">المقالات</Link></li>
-                                <li className='pt-[20px] text-[20px] hover:text-[25px] transition'><Link href="/">تواصل معانا</Link></li>
+                                <li className='pt-[20px] text-[20px]  link'><Link href="/">الرئيسية</Link></li>
+                                <li className='pt-[20px] text-[20px] h link'><Link href="/">خدمتنا</Link></li>
+                                <li className='pt-[20px] text-[20px]  link'><Link href="/">اعمالنا</Link></li>
+                                <li className='pt-[20px] text-[20px]  link'><Link href="/">المقالات</Link></li>
+                                <li className='pt-[20px] text-[20px]  link'><Link href="/">تواصل معانا</Link></li>
                             </ul>
-
-
                         </div>
                         <div className=" flex justify-center mt-[40px] gap-4">
                             <div className='flex items-center gap-2 px-5 py-3 cursor-pointer border rounded-full'>
@@ -82,8 +85,8 @@ const Header = () => {
                                 <FaArrowLeftLong className='flex items-center' />
                             </div>
                         </div>
-
                     </div>
+                  </div>
                 </nav>
             )}
         </>
