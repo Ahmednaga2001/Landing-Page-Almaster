@@ -54,7 +54,7 @@ const Header = () => {
                 </nav>
             )}
             {isMenuOpen && (
-                    <nav className=" min-h-screen text-text se-nav fixed top-0 w-full z-20">
+                    <nav className=" min-h-screen text-text se-nav fixed top-0 w-full z-50">
                   <div className="nav-mobile-overlay">
                   <div className="container mx-auto p-4">
                         <div className='flex justify-between'>
