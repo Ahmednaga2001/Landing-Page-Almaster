@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+}
+body{
+}
+button{
+  /* background-image: linear-gradient(#2eb2d3,#131E29); */
+
+}
+.hero{
+  /* background-image: url("/bg.jpg") !important */
+}
+.services .box{
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 2px 2px 10px  #2eb2d3 ;
+  cursor: pointer;
+}
+.services .box .service-icon{
+  font-size: 40px;
+  color: #2eb2d3;
+}
+.service-icon{
+  margin: auto;
+ 
+}
+.services .box h3{
+  font-size: 25px;
+  padding-top: 15px;
+
+}
+.services .box p{
+  padding-top: 15px;
+}
+.works .box{
+  padding: 15px;
+  box-shadow: #2eb2d3 0px 30px 60px -12px inset, #2eb2d3 0px 18px 36px -18px inset;
+  height: 220px;
+}
+.works .box img{
+  width: 100%;
+  height: 80%;
+ 
+}
+.works .box h4{
+  text-align: center;
+  padding-top: 10px;
+}
+.works .grid-parent{
+  position: relative;
+}
+
+.works .box-overlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+visibility: hidden;
+  opacity: 0;
+  transition: .6s;
+}
+.box-overlay a{
+  text-decoration: none;
+  display: block;
+  background-image: linear-gradient( #2eb2d3, #131E29);
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+
+}
+.box-overlay a:nth-child(2){
+  margin-top: 10px;
+}
+.works .grid-parent:hover .box-overlay{
+  visibility: visible;
+      opacity: 1;
+  }
+@media (max-width : 1023px) {
+  .advantages .box h2{
+    font-size: 25px;
+  }
+  
+}
+  @media (max-width: 767px) { 
+    .advantages .box{
+      border-left: none !important;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.600) ;
+      text-align: center;
+    }
+    .advantages .box:not(:last-child){
+      margin-bottom: 20px;
+
+
+    }
+    .advantages .box h2{
+      display: flex;
+      justify-content: center;
+    }
+
+   }
+
+
+   .no-scroll {
+    overflow: hidden;
+  }
+/* styles.css */
+/* styles.css */
+.se-nav {
+  position: relative; /* Ensure the parent container has a position */
+}
+
+.se-nav::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba(23, 23, 63, 0.95); /* Adjust opacity and color as needed */
+  width: 0; /* Initially hide the background */
+  height: 100%; /* Cover the entire height of the viewport */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+  transition: width 0.3s ease; /* Add a transition for smooth appearance */
+}
+
+.se-nav.active::before {
+  width: 100%; /* Expand to cover the entire width when active */
+}
+
